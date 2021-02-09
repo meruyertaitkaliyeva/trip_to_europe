@@ -1,0 +1,201 @@
+.page-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 170px 0 81px 0;
+    box-sizing: border-box;
+}
+
+.page-footer__title {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+    color: $special-dark;
+}
+
+@media (min-width: $tablet-breakpoint) {
+    .page-footer__trips .page-footer__title,
+    .page-footer__contacts .page-footer__title {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 189px;
+            background-color: #d7d9df;
+        }
+    }
+
+    .page-footer__trips .page-footer__title {
+        padding-right: 140px;
+    }
+
+    .page-footer__contacts .page-footer__title {
+        padding-right: 149px;
+    }
+}
+
+.page-footer__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 96px);
+    column-gap: 50px;
+    flex-wrap: wrap;
+    @include list-style;
+}
+
+.page-footer__link {
+    font-size: 14px;
+    line-height: 17px;
+    color: $special-dark;
+    opacity: 0.5;
+    &--email, &--tel {
+        margin: 0;
+        color: $special-coral;
+        text-decoration: underline;
+    }
+    &--email {
+        margin-left: 15px;
+        margin-bottom: 19px;
+    }
+    &--tel {
+        margin-left: 11px;
+        font-size: 16px;
+        line-height: 32px;
+    }
+}
+
+.page-footer__contacts {
+    padding-left: 90px;
+}
+
+.page-footer__email, .page-footer__tel {
+    display: flex;
+}
+
+.page-footer__icon {
+    &--phone {
+        stroke: $basic-grey;
+    }
+}
+
+.page-footer__corporat {
+    padding-left: 49px;
+}
+
+.page-footer__text {
+    width: 320px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    color: $special-dark;
+    opacity: 0.5;
+}
+
+@media (max-width: $tablet-breakpoint) {
+    .page-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 80px 21px 50px;
+    }
+
+    @media (min-width: $mobile-breakpoint) {
+        .page-footer__contacts {
+            padding-left: 50px;
+            text-align: left;
+            & .page-footer__title {
+                position: unset;
+                padding-right: 0;
+            }
+        }
+
+        .page-footer__trips .page-footer__title {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 1px;
+                height: 189px;
+                background-color: #d7d9df;
+            }
+        }
+    
+        .page-footer__trips {
+            & .page-footer__title {
+                padding-right: 146px;
+            }
+        }
+    
+        .page-footer__corporat {
+            width: 100%;
+            padding: 0;
+            & .page-footer__title {
+                position: relative;
+                margin-top: 30px;
+                padding-top: 30px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 726px;
+                    height: 1px;
+                    background-color: $basic-grey;
+                }
+            }
+        }
+    }
+
+    .page-footer__list {
+        column-gap: 30px;
+        text-align: left;
+    }
+
+    .page-footer__text {
+        width: auto;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .page-footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 70px 12px 25px;
+    }
+
+    .page-footer__list {
+        column-gap: 20px;
+    }
+
+    .page-footer__contacts,
+    .page-footer__corporat  {
+        padding: 0;
+        text-align: center;
+    }
+
+    .page-footer__title {
+        margin-bottom: 20px;
+    }
+
+    .page-footer__contacts .page-footer__title,
+    .page-footer__corporat .page-footer__title {
+        position: relative;
+        padding-top: 30px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 288px;
+            height: 1px;
+            background-color: $basic-grey;
+        }
+    }
+}

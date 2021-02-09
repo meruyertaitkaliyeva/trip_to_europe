@@ -1,0 +1,75 @@
+.page-modal {
+    position: relative;
+    display: none;
+    // display: flex;
+    width: 728px;
+    height: 444px;
+    margin: auto;
+}
+
+.page-modal__pic {
+    width: 338px;
+    height: 444px;
+}
+
+.page-modal__folder {
+    width: 390px;
+    padding: 72px 79px 82px 74px;
+    background-color: $light-grey;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.page-modal__title {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 42px;
+    color: $dark-grey;
+}
+
+.page-modal__input {
+    width: 270px;
+    height: 50px;
+    border: 1px solid $basic-grey;
+    margin-bottom: 20px;
+    padding: 16px 15px 15px 15px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark-grey;
+    box-sizing: border-box;
+    &--tel {
+        padding-left: 26px;
+    }
+}
+
+.page-modal__button {
+    width: 176px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.page-modal__close {
+    position: absolute;
+    width: 50px;
+    height: 52px;
+    border: none;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    cursor: pointer;
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.page-modal__icon {
+    fill: $light-grey;
+}

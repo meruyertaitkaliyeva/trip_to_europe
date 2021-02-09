@@ -1,0 +1,30 @@
+.button {
+    display: inline-block;
+    padding: 30px 40px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: $basic-white;
+    background-color: $special-coral;
+    box-sizing: border-box;
+  }
+
+  .button:hover,
+  .button:focus {
+      background-color: $special-orange;
+  }
+
+  .button:active {
+      background-color: $special-orange;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+      .button {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+      }
+  }

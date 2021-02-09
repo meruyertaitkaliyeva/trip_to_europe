@@ -1,0 +1,104 @@
+
+.main-header {
+    width: 100%;
+    height: 860px;
+    padding-top: 185px;
+    padding-left: 58%;
+    background-image: url("../img/desktop-heading.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.main-header__folder {
+    width: 412px;
+    color: $basic-white;
+    text-align: left;
+}
+
+.main-header__title {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    @include title-style;
+}
+
+.main-header__intro {
+    margin: 0;
+    margin-bottom: 33px;
+    padding: 0;
+    line-height: 27px;
+}
+
+.main-header__button {
+    position: relative;
+    padding-right: 179px;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 40px;
+        width: 16px;
+        height: 16px;
+        background-image: url("../img/arrow.svg");
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: $tablet-breakpoint) {
+    .main-header {
+        height: 344px;
+        padding: 0;
+        padding-top: 60px;
+        background-image: url("../img/tablet-heading.jpg");
+    }
+
+    .main-header__folder {
+        width: 398px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .main-header__title {
+        margin-bottom: 15px;
+        @include tablet-title-style;
+    }
+
+    .main-header__intro {
+        margin-bottom: 15px;
+        line-height: 27px;
+        letter-spacing: -0.47px;
+    }
+    .main-header__button {
+        padding: 19px 107px 19px 40px;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .main-header {
+        margin: 0;
+        height: 235px;
+        background-image: url("../../img/mobile-heading.jpg");
+    }
+
+    .main-header__folder {
+        width: 294px;
+    }
+
+    .main-header__title {
+        margin-bottom: 122px;
+        padding: 0;
+        @include mobile-title-style;
+    }
+
+    .main-header__intro {
+        color: $dark-brown-grey;
+        margin-bottom: 20px;
+    }
+
+    .main-header__button {
+        padding: 19px 145px 19px 40px;
+    }
+}

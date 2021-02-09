@@ -1,0 +1,149 @@
+.feedback {
+    position: relative;
+}
+
+.fiidback__pic {
+    width: 844px;
+    height: 455px;
+    object-fit: cover;
+}
+
+.feedback__folder {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 656px;
+    min-height: 315px;
+    padding: 50px 49px 49px 50px;
+    box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
+    background-color: $basic-white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.feedback__heading {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 600px;
+    font-size: 25px;
+    line-height: 32px;
+    color: $special-dark;
+}
+
+.feedback__text {
+    margin: 0;
+    margin-bottom: 24px;
+    line-height: 24px;
+    color: $special-dark;
+}
+
+.feedback__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feedback__input {
+    width: 269px;
+    height: 50px;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid rgba(44, 46, 63, 0.3);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 17px;
+    color: $special-dark;
+    box-sizing: border-box;
+}
+
+.feedback__star {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 10px;
+        top: 5px;
+        left: 10px;
+        background-image: url("../../img/star.svg");
+        background-repeat: no-repeat;
+    }
+}
+
+.feedback__button {
+    width: 176px;
+    height: 50px;
+    margin: auto;
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+@media (max-width: $tablet-breakpoint) {
+    .feedback__folder {
+        top: 50%;
+        right: unset;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .feedback__pic {
+        width: 100%;
+        height: 455px;
+    }
+
+    .feedback__button {
+        width: 250px;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .feedback {
+        position: unset;
+        padding: 0;
+        background-color: $light-grey;
+    }
+    
+    .feedback__pic {
+        display: none;
+    }
+
+    .feedback__folder {
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        width: 320px;
+        margin: 0 auto;
+        padding: 50px 16px;
+        box-shadow: unset;
+        background-color: $light-grey;
+    }
+
+    .feedback__heading {
+        margin-bottom: 19px;
+    }
+
+    .feedback__text {
+        margin-bottom: 20px;
+    }
+
+    .feedback__form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback__input {
+        width: 288px;
+    }
+
+    .feedback__button {
+        width: 288px;
+    }
+}

@@ -1,0 +1,129 @@
+.package {
+    padding: 40px 30px 30px 30px;
+    box-sizing: border-box;
+}
+
+.package__folder {
+    display: flex;
+    justify-content: space-between;
+    &--complex {
+        color: $special-coral;
+    }
+    &--economy {
+        color: $special-dark;
+        opacity: 0.7;
+    }
+}
+
+.package__title, .package__price {
+    margin: 0;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.package__title {
+    margin-bottom: 40px;
+}
+
+.package__text {
+    margin: 0;
+    margin-bottom: 28px;
+    line-height: 24px;
+}
+
+.package__list {
+    position: relative;
+    @include list-style;
+    padding-top: 30px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 310px;
+        height: 1px;
+    }
+    &--complex::before {
+        background-color: $special-coral;
+        opacity: 0.5;
+    }
+    &--economy::before {
+        background-color:rgba(44, 46, 63, 0.3);
+    }
+    &--complex {
+        margin-bottom: 54px;
+    }
+    &--economy {
+        margin-bottom: 30px;
+    }
+}
+
+.package__item {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    line-height: 32px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.package__list {
+    &--complex .package__item::before {
+        background-image: url("../../img/check.svg");
+    }
+    &--economy .package__item::before {
+        background-image: url("../../img/check-orange.svg");
+    }
+}
+
+.package__button {
+    align-items: center;
+    padding: 30px 68px;
+}
+
+@media (max-width: $tablet-breakpoint) {
+    .package {
+        position: relative;
+        padding: 30px 20px 0 20px;
+    }
+
+    .package__folder {
+        display: block;
+        text-align: center;
+    }
+
+    .package__title {
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .package__price {
+        margin-bottom: 11px;
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    .package__list {
+        text-align: left;
+        &::before {
+            width: 248px;
+        }
+    }
+
+    .package__button {
+        position: relative;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 19px 71px;
+    }
+}
