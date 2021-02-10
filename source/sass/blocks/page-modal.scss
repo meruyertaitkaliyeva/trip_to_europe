@@ -1,26 +1,32 @@
 .page-modal {
-    position: relative;
     display: none;
-    // display: flex;
+    position: relative;
     width: 728px;
-    height: 444px;
+    min-height: 444px;
     margin: auto;
+}
+
+.page__modal--show {
+    display: block;
 }
 
 .page-modal__pic {
     width: 338px;
-    height: 444px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .page-modal__folder {
     width: 390px;
-    padding: 72px 79px 82px 74px;
+    padding: 72px 60px 70px;
     background-color: $light-grey;
     text-align: center;
     box-sizing: border-box;
 }
 
 .page-modal__title {
+    margin: 0;
+    margin-bottom: 50px;
     font-weight: 600;
     font-size: 25px;
     line-height: 42px;
@@ -57,11 +63,12 @@
 
 .page-modal__close {
     position: absolute;
-    width: 50px;
+    width: 52px;
     height: 52px;
+    padding: 0;
     border: none;
-    top: 20px;
-    right: 20px;
+    top: 0;
+    right: 0;
     background: transparent;
     cursor: pointer;
     &:active,
@@ -72,4 +79,27 @@
 
 .page-modal__icon {
     fill: $light-grey;
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .page-modal {
+        width: $mobile-width;
+        padding: 0;
+    }
+
+    .page-modal__folder {
+        padding: 100px 16px 185px;
+    }
+
+    .page-modal__pic {
+        display: none;
+    }
+
+    .page-modal__input {
+        width: 288px;
+    }
+
+    .page-modal__button {
+        width: 288px;
+    }
 }

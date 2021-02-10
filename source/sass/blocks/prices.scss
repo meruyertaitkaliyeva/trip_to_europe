@@ -7,13 +7,14 @@
 
 .prices__package {
     width: 370px;
+    min-height: 672px;
     border-radius: 6px;
     &--complex {
         margin-right: 30px;
         border: 3px solid $special-coral;
     }
     &--economy {
-        margin-right: 111px;
+        margin-right: 100px;
         border: 1px solid rgba(44, 46, 63, 0.3);
     }
 }

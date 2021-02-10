@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     min-height: 50px;
-    padding: 47px 0 30px 0;
+    padding: 37px 0 30px 0;
     box-sizing: border-box;
 }
 
@@ -33,15 +33,11 @@
         line-height: 32px;
         text-decoration: underline;
     }
-    &:hover,
-    &:focus {
-        color: $special-coral;
-    }
 }
 
-.page-header__logo {
-    width: 44px;
-    height: 17px;
+.page-header__logo img {
+    width: 57px;
+    height: 22px;
 }
 
 .page-header__folder {
@@ -50,6 +46,18 @@
 
  .page-header__icon {
      stroke: $special-dark;
+ }
+
+ .page-header__item {
+    &:hover .page-header__link,
+    &:focus .page-header__link {
+        color: $special-coral;
+        cursor: pointer;
+    }
+    &:hover .page-header__icon,
+    &:focus .page-header__icon {
+        stroke: $special-coral;
+    }
  }
 
  .page-header__toggle {
@@ -66,8 +74,12 @@
     }
 
     .page-header__logo {
-        margin: 17px 0 15px 21px;
+        margin: 18px 0 0 21px;
         padding: 0;
+        & img {
+            width: 44px;
+            height: 17px;
+        }
     }
       
     .page-header__toggle {
@@ -100,8 +112,8 @@
 
     .page-header__nav--opened .page-header__toggle {
         position: absolute;
-        top: 7px;
-        right: 20px;
+        top: 0;
+        right: 0;
         background-color: $basic-white;
         &::before {
             content: "";
@@ -115,12 +127,6 @@
             background-repeat: no-repeat;
           }
     }
-
-    .page-header__nav--opened {
-        position: relative;
-        bottom: 0;
-        left: 0;
-      }
       
     .page-header__list {
         display: block;
@@ -133,13 +139,10 @@
         background-color: $basic-white;
         z-index: 2;
       }
-
-    .page-header__nav--closed .page-header__list {
-        display: none;
-    }
       
     .page-header__item {
         position: relative;
+        width: 100%;
         &::after {
             content: "";
             position: absolute;
@@ -175,5 +178,13 @@
         color: $dark-grey;
         background-color: $light-grey;
         box-sizing: border-box;
+    }
+
+    .page-header__nav--closed .page-header__list {
+        display: none;
+    }
+
+    .page-header__nav--nojs .page-header__nav__toggle {
+        display: none;
     }
 }

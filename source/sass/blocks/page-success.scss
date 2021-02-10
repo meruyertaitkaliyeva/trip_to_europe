@@ -4,15 +4,16 @@
     width: 728px;
     height: 444px;
     margin: auto;
+    padding: 179px 164px;
     background-color: $light-grey;
+    box-sizing: border-box;
+}
+
+.page__modal--show {
+    display: block;
 }
 
 .page-success__text {
-    width: 399px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-weight: 500;
     font-size: 25px;
     line-height: 42px;
@@ -20,21 +21,9 @@
     text-align: center;
 }
 
-.page-success__close {
-    position: absolute;
-    width: 50px;
-    height: 52px;
-    border: none;
-    top: 20px;
-    right: 20px;
-    background: transparent;
-    cursor: pointer;
-    &:active,
-    &:focus {
-        outline: none;
+@media (max-width: $mobile-breakpoint) {
+    .page-success {
+        width: $mobile-width;
+        padding: 100px 16px 185px;
     }
-}
-
-.page-success__icon {
-    fill: $light-grey;
 }
